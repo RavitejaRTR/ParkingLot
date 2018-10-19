@@ -99,6 +99,24 @@ public class ParkingLot {
         }
 	}
 	
+	public void getRegistrationNumbersFromColor(String color) {
+		if (this.size == 0) {
+            System.out.println("Sorry, parking lot is not created");
+        } else if (this.colorRegno.containsKey(color)) {
+            ArrayList<String> regNoList = this.colorRegno.get(color);
+            System.out.println();
+            for (int i=0; i < regNoList.size(); i++) {
+                if (!(i==regNoList.size() - 1)){
+                    System.out.print(regNoList.get(i) + ",");
+                } else {
+                    System.out.print(regNoList.get(i));
+                }
+            }
+        } else {
+            System.out.println("Not found");
+        }
+	}
+	
 	public void getSlotNumberFromRegNo(String regNo) {
 		if (this.size == 0) {
             System.out.println("Sorry, parking lot is not created");
