@@ -15,7 +15,7 @@ public class ParkingLot {
 	
 	public void createParkingLot(String size) {
 		try {
-			this.size = Integer.parseInt(size);
+			this.size = Integer.parseInt(size)>0?Integer.parseInt(size):0;
 		} catch(Exception e) {
 			System.out.println("Invalid lot size, Parking lot is not created.");
 		}
