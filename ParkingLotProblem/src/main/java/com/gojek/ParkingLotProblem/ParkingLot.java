@@ -32,7 +32,6 @@ public class ParkingLot {
 	public void park(String regNo, String color) {
 		if (this.size == 0) {
             System.out.println("Sorry, parking lot is not created");
-            System.out.println();
         } else if (this.slotCar.size() == this.size) {
             System.out.println("Sorry, parking lot is full");
         } else {
@@ -58,7 +57,13 @@ public class ParkingLot {
 	}
 	
 	public void getSlotNumberFromRegNo(String regNo) {
-		
+		if (this.size == 0) {
+            System.out.println("Sorry, parking lot is not created");
+        } else if (this.slotRegno.containsKey(regNo)) {
+            System.out.println(this.slotRegno.get(regNo));
+        } else {
+            System.out.println("Not found");
+        }
 	}
 	
 	

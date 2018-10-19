@@ -11,5 +11,7 @@ public class App
         System.out.println( "Hello World!" );
         ParkingLot p = new ParkingLot();
         p.createParkingLot("0");
+        p.park("ABC", "White");
+        p.getSlotNumberFromRegNo("ABC");
     }
 }
