@@ -57,5 +57,9 @@ public class ParkingLot {
         }
 	}
 	
+	public void getSlotNumberFromRegNo(String regNo) {
+		
+	}
+	
 	
 }
