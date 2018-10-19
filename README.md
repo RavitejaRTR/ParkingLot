@@ -10,7 +10,7 @@ The jar file ParkingLotProblem/target/ParkingLotProblem-0.1.jar is the executabl
 Two ways to run the application
 
 Inpu_file mode : java -jar ParkingLotProblem-0.1.jar <Input_file>
-Note: Have the command line opened to the exact folder the jar file is present.
       
 Interactive mode: java -jar ParkingLotProblem-0.1.jar
+
 Note: Have the command line opened to the exact folder the jar file is present.
