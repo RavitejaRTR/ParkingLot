@@ -13,5 +13,6 @@ public class App
         p.createParkingLot("0");
         p.park("ABC", "White");
         p.getSlotNumberFromRegNo("ABC");
+        p.leave("6");
     }
 }

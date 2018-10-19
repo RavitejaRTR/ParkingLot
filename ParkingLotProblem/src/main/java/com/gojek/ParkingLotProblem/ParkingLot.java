@@ -56,6 +56,29 @@ public class ParkingLot {
         }
 	}
 	
+	public void leave(String slotNo) {
+        if (this.size == 0) {
+            System.out.println("Sorry, parking lot is not created");
+            System.out.println();
+        } else if (this.slotCar.size() > 0) {
+            Car carToLeave = this.slotCar.get(slotNo);
+            if (carToLeave != null) {
+                this.slotCar.remove(slotNo);
+                this.slotRegno.remove(carToLeave.regno);
+                ArrayList<String> regNoList = this.colorRegno.get(carToLeave.color);
+                if (regNoList.contains(carToLeave.regno)) {
+                    regNoList.remove(carToLeave.regno);
+                }
+                // Add the Lot No. back to available slot list.
+                this.slotsAvailable.add(Integer.parseInt(slotNo));
+                System.out.println("Slot number " + slotNo + " is free");
+                System.out.println();
+            } else {
+                System.out.println("Slot number " + slotNo + " is already empty");
+            }
+        }
+    }
+	
 	public void getSlotNumberFromRegNo(String regNo) {
 		if (this.size == 0) {
             System.out.println("Sorry, parking lot is not created");
