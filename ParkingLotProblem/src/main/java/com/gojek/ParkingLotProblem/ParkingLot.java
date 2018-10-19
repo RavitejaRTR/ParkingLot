@@ -40,7 +40,20 @@ public class ParkingLot {
             String slot = slotsAvailable.get(0).toString();
             Car car = new Car(regNo, color);
             this.slotCar.put(slot, car);
-            
+            this.slotRegno.put(regNo, slot);
+            if (this.colorRegno.containsKey(color)) {
+                ArrayList<String> regNoList = this.colorRegno.get(color);
+                this.colorRegno.remove(color);
+                regNoList.add(regNo);
+                this.colorRegno.put(color, regNoList);
+            } else {
+                ArrayList<String> regNoList = new ArrayList<String>();
+                regNoList.add(regNo);
+                this.colorRegno.put(color, regNoList);
+            }
+            System.out.println("Allocated slot number: " + slot);
+            slotsAvailable.remove(0);
+            return;
         }
 	}
 	
