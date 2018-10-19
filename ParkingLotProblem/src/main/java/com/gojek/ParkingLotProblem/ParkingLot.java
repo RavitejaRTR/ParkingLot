@@ -117,6 +117,30 @@ public class ParkingLot {
         }
 	}
 	
+	public void getSlotNumbersFromColor(String color) {
+		if (this.size == 0) {
+            System.out.println("Sorry, parking lot is not created");
+        } else if (this.colorRegno.containsKey(color)) {
+            ArrayList<String> regNoList = this.colorRegno.get(color);
+            ArrayList<Integer> slotList = new ArrayList<Integer>();
+            System.out.println();
+            for (int i=0; i < regNoList.size(); i++) {
+                slotList.add(Integer.valueOf(this.slotRegno.get(regNoList.get(i))));
+            }
+            Collections.sort(slotList);
+            for (int j=0; j < slotList.size(); j++) {
+                if (!(j == slotList.size() - 1)) {
+                    System.out.print(slotList.get(j) + ",");
+                } else {
+                    System.out.print(slotList.get(j));
+                }
+            }
+            System.out.println();
+        } else {
+            System.out.println("Not found");
+        }
+	}
+	
 	public void getSlotNumberFromRegNo(String regNo) {
 		if (this.size == 0) {
             System.out.println("Sorry, parking lot is not created");
