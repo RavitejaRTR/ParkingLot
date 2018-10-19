@@ -79,6 +79,26 @@ public class ParkingLot {
         }
     }
 	
+	public void status() {
+		if (this.size == 0) {
+            System.out.println("Sorry, parking lot is not created");
+        } else if (this.slotCar.size() > 0) {
+            // Print the current status.
+            System.out.println("Slot No.\tRegistration No.\tColor");
+            Car car;
+            for (int i = 1; i <= this.size; i++) {
+                String key = Integer.toString(i);
+                if (this.slotCar.containsKey(key)) {
+                    car = this.slotCar.get(key);
+                    System.out.println(i + "\t" + car.regno + "\t" + car.color);
+                }
+            }
+            System.out.println();
+        } else {
+            System.out.println("Parking lot is empty");
+        }
+	}
+	
 	public void getSlotNumberFromRegNo(String regNo) {
 		if (this.size == 0) {
             System.out.println("Sorry, parking lot is not created");
