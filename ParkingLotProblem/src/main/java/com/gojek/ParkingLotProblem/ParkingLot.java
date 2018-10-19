@@ -1,6 +1,7 @@
 package com.gojek.ParkingLotProblem;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,4 +28,21 @@ public class ParkingLot {
         this.colorRegno = new HashMap<String, ArrayList<String>>();
         System.out.println("Created parking lot with " + size + " slots");
 	}
+	
+	public void park(String regNo, String color) {
+		if (this.size == 0) {
+            System.out.println("Sorry, parking lot is not created");
+            System.out.println();
+        } else if (this.slotCar.size() == this.size) {
+            System.out.println("Sorry, parking lot is full");
+        } else {
+        	Collections.sort(slotsAvailable);
+            String slot = slotsAvailable.get(0).toString();
+            Car car = new Car(regNo, color);
+            this.slotCar.put(slot, car);
+            
+        }
+	}
+	
+	
 }
