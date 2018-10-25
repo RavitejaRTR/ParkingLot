@@ -7,10 +7,18 @@ Developed the application in Java using maven as build tool.
 
 The jar file ParkingLotProblem/target/ParkingLotProblem-0.1.jar is the executable file.
 
-Two ways to run the application
+If you are running bash files as mentioned in pdf
+(Path in terminal should be the project directory where bin,src,pom.xml are present)
 
-Inpu_file mode : java -jar ParkingLotProblem-0.1.jar <Input_file>
-      
+Now run
+
+for build: bin/./setup.txt
+
+for running: bin/.parking_lot.txt {inputfile} (inputfile is optional)
+
+Two ways to run the application if followed the below 'Note'
+
+Input_file mode : java -jar ParkingLotProblem-0.1.jar {Input_file}      
 Interactive mode: java -jar ParkingLotProblem-0.1.jar
 
 Note: Have the command line opened to the exact folder the jar file is present.
