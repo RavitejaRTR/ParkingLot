@@ -14,11 +14,11 @@ Now run
 
 for build: bin/./setup.txt
 
-for running: bin/.parking_lot.txt <inputfile> (inputfile is optional)
+for running: bin/.parking_lot.txt {inputfile} (inputfile is optional)
 
 Two ways to run the application if followed the below 'Note'
 
-Input_file mode : java -jar ParkingLotProblem-0.1.jar <Input_file>      
+Input_file mode : java -jar ParkingLotProblem-0.1.jar {Input_file}      
 Interactive mode: java -jar ParkingLotProblem-0.1.jar
 
 Note: Have the command line opened to the exact folder the jar file is present.
