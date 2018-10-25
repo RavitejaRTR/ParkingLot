@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd ..
+cd target
+
+echo Enter the file name
+
+read fileName
+
+java -jar ParkingLotProblem-0.1 fileName
