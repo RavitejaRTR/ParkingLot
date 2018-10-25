@@ -1,6 +1,4 @@
-#!/bin/bash
-
-cd ..
+#!/bin/bashs
 
 mvn clean install
 

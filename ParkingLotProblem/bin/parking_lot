@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ..
 cd target
 
-java -jar ParkingLotProblem-0.1 $1
+java -jar ParkingLotProblem-0.1.jar $1
