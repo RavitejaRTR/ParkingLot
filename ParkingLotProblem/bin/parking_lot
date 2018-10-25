@@ -3,8 +3,4 @@
 cd ..
 cd target
 
-echo Enter the file name (Ex: input.txt)
-
-read fileName
-
-java -jar ParkingLotProblem-0.1 fileName
+java -jar ParkingLotProblem-0.1 $1
