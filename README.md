@@ -10,8 +10,10 @@ The jar file ParkingLotProblem/target/ParkingLotProblem-0.1.jar is the executabl
 If you are running bash files as mentioned in pdf
 (Path in terminal should be the project directory where bin,src,pom.xml are present)
 
-Now run:
+Now run
+
 for build: bin/./setup.txt
+
 for running: bin/.parking_lot.txt <inputfile> (inputfile is optional)
 
 Two ways to run the application if followed the below 'Note'
